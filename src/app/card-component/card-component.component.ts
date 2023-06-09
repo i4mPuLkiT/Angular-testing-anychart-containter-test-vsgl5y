@@ -1435,6 +1435,20 @@ export class CardComponentComponent implements OnInit {
         13.219999999999,
         10,
       ],
+      [
+        'Testing 101',
+        '91.57',
+        60,
+        100,
+        0,
+        0,
+        0,
+        0,
+        335,
+        26.78,
+        13.219999999999,
+        10,
+      ],
     ];
 
     anychart.onDocumentReady(function () {
@@ -5640,8 +5654,50 @@ export class CardComponentComponent implements OnInit {
           name: null,
           title: '',
         },
+        {
+          id: 101,
+          x: 'Testing 101',
+          oldX: 'Testing 101',
+          text: null,
+          value: '92.86',
+          oldValue: '92.86',
+          min: 0,
+          max: 100,
+          sdMinus: 0,
+          average: 0,
+          sdPlus: 0,
+          cutOff: 0,
+          phaseId: 0,
+          uniqueId: 500,
+          isClickable: false,
+          count: 1180,
+          fill: 'rgb(100, 181, 246)',
+          stroke: 'rgb(100, 181, 246)',
+          size: 2,
+          assessmentDate: null,
+          dataPoints: [
+            {
+              label: 'Actual',
+              value: 92.86,
+            },
+            {
+              label: 'Min',
+              value: 0,
+            },
+            {
+              label: 'Max',
+              value: 100,
+            },
+          ],
+          drillDown: [],
+          isNewInnovation: null,
+          responseText: null,
+          isRubric: false,
+          name: null,
+          title: '',
+        },
       ];
-      var chart = anychart.bar();
+      var chart: any = anychart.bar();
       var credits = chart.credits();
       credits.enabled(false);
       chart.padding([10, 40, 5, 20]);
@@ -5736,6 +5792,7 @@ export class CardComponentComponent implements OnInit {
       chart.title('Create a Bar chart');
       chart.container('container');
       chart.draw();
+      chart.xAxis().scale().ticks().interval(1);
     });
   }
 }
